@@ -1,0 +1,18 @@
+{
+	"label": "Актёры (Сила за троном)",
+	"mapping": {
+		"species": "system.details.species.value",
+		"items": {
+			"path": "items",
+			"converter": "fromPack"
+		},
+		"gender": {
+			"path": "system.details.gender.value",
+			"converter": "convertGender"
+		},
+		"tokenName": {
+			"path": "prototypeToken.name",
+			"converter": "name"
+		}
+	}
+}

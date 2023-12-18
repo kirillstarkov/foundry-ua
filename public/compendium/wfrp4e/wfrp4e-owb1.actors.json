@@ -1,0 +1,18 @@
+{
+	"label": "Актёры (Сборник Старого Света I)",
+	"mapping": {
+		"species": "system.details.species.value",
+		"items": {
+			"path": "items",
+			"converter": "fromPack"
+		},
+		"gender": {
+			"path": "system.details.gender.value",
+			"converter": "convertGender"
+		},
+		"tokenName": {
+			"path": "prototypeToken.name",
+			"converter": "name"
+		}
+	}
+}

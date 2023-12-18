@@ -1,0 +1,41 @@
+{
+	"label": "Актёры (К оружию!)",
+	"mapping": {
+		"species": "system.details.species.value",
+		"items": {
+			"path": "items",
+			"converter": "fromPack"
+		},
+		"gender": {
+			"path": "system.details.gender.value",
+			"converter": "convertGender"
+		},
+		"tokenName": {
+			"path": "prototypeToken.name",
+			"converter": "name"
+		}
+	},
+	"entries": {
+		"Demigryph Mount": {
+			"name": "Скакун-демигриф"
+		},
+		"Doktor": {
+			"name": "Доктор"
+		},
+		"Lawyer": {
+			"name": "Адвокат"
+		},
+		"Local Scout": {
+			"name": "Местный проводник"
+		},
+		"Porter": {
+			"name": "Портье"
+		},
+		"Scribe": {
+			"name": "Писец"
+		},
+		"Seasoned Mercenary": {
+			"name": "Опытный наёмник"
+		}
+	}
+}
