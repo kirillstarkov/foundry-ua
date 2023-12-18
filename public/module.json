@@ -11,7 +11,7 @@
 			"url": ""
 		}
 	],
-	"version": "0.01",
+	"version": "1",
 	"compatibility": {
 		"minimum": "11",
 		"verified": "11",
@@ -867,6 +867,6 @@
 		}
 	],
 	"url": "https://github.com/kirillstarkov/foundry-ua",
-	"manifest": "https://github.com/kirillstarkov/foundry-ua/releases/download/latest/module.json",
-	"download": "https://github.com/kirillstarkov/foundry-ua/releases/download/latest/ua-ua.zip"
+	"manifest": "https://github.com/kirillstarkov/foundry-ua/releases/download/v1/module.json",
+	"download": "https://github.com/kirillstarkov/foundry-ua/releases/download/v1/ua-ua.zip"
 }

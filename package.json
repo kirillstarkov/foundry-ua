@@ -5,8 +5,8 @@
 		"process:build": "vite build",
 		"process:bump": "bumpp ./public/module.json ./README.md --no-push --no-commit --no-tag",
 		"process:zip": "node process-zip.js",
-		"build": "pnpm process:build",
-		"release": "pnpm process:bump && pnpm process:build && pnpm process:zip",
+		"build": "npm run process:build",
+		"release": "npm run process:build && npm run process:zip",
 		"format:check": "prettier --check .",
 		"format": "prettier --write ."
 	},

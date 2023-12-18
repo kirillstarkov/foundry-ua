@@ -1,8 +1,8 @@
 # build output
 dist/
 .output/
-ru-ru/
-ru-ru.zip
+ua-ua/
+ua-ua.zip
 
 # dependencies
 node_modules/
