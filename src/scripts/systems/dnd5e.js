@@ -1,6 +1,6 @@
 export function init() {
 	/* Уведомление выбора перевода */
-	game.settings.register("ru-ru", "altTranslationSelected", {
+	game.settings.register("ua-ua", "altTranslationSelected", {
 		type: Boolean,
 		default: false,
 		scope: "world",
@@ -11,7 +11,7 @@ export function init() {
 	});
 
 	/* Настройка Babele */
-	game.settings.register("ru-ru", "compendiumTranslation", {
+	game.settings.register("ua-ua", "compendiumTranslation", {
 		name: "Перевод библиотек",
 		hint: "(Требуется модуль Babele) Некоторые библиотеки системы D&D5e будут переведены.",
 		type: Boolean,
@@ -24,7 +24,7 @@ export function init() {
 		}
 	});
 
-	if (!game.settings.get("ru-ru", "altTranslationSelected")) {
+	if (!game.settings.get("ua-ua", "altTranslationSelected")) {
 		new Dialog({
 			title: "Выбор перевода",
 			content: `<p>Выберите предпочитаемый перевод системы D&D5. Вы можете изменить это позже в настройках модуля</p>`,
@@ -32,15 +32,15 @@ export function init() {
 				hw: {
 					label: "Hobby World",
 					callback: () => {
-						game.settings.set("ru-ru", "altTranslation", false);
-						game.settings.set("ru-ru", "altTranslationSelected", true);
+						game.settings.set("ua-ua", "altTranslation", false);
+						game.settings.set("ua-ua", "altTranslationSelected", true);
 					}
 				},
 				ph: {
 					label: "Phantom Studio",
 					callback: () => {
-						game.settings.set("ru-ru", "altTranslation", true);
-						game.settings.set("ru-ru", "altTranslationSelected", true);
+						game.settings.set("ua-ua", "altTranslation", true);
+						game.settings.set("ua-ua", "altTranslationSelected", true);
 					}
 				}
 			}
@@ -50,16 +50,16 @@ export function init() {
 	/* Регистрация Babele */
 	if (typeof Babele !== "undefined") {
 		Babele.get().register({
-			module: "ru-ru",
+			module: "ua-ua",
 			lang: "ru",
-			dir: game.settings.get("ru-ru", "altTranslation")
+			dir: game.settings.get("ua-ua", "altTranslation")
 				? "compendium/dnd5e-alt"
 				: "compendium/dnd5e"
 		});
 
 		game.settings.set("babele", "showOriginalName", true);
 	} else {
-		if (game.settings.get("ru-ru", "compendiumTranslation")) {
+		if (game.settings.get("ua-ua", "compendiumTranslation")) {
 			new Dialog({
 				title: "Перевод библиотек",
 				content: `<p>Для перевода библиотек системы D&D5 требуется активировать модуль <b>Babele</b>. Вы можете отключить перевод библиотек в настройках модуля</p>`,
@@ -70,7 +70,7 @@ export function init() {
 					never: {
 						label: "Больше не показывать",
 						callback: () => {
-							game.settings.set("ru-ru", "compendiumTranslation", false);
+							game.settings.set("ua-ua", "compendiumTranslation", false);
 						}
 					}
 				}
@@ -88,7 +88,7 @@ export function init() {
 		if (!game.user.isGM) return;
 
 		const lastMenuSetting = html
-			.find(`input[name="ru-ru.compendiumTranslation"]`)
+			.find(`input[name="ua-ua.compendiumTranslation"]`)
 			.closest(".form-group");
 
 		const updateAAButton = $(`
@@ -113,7 +113,7 @@ export function init() {
 
 async function updateAA() {
 	const translatedSettings = await foundry.utils.fetchJsonWithTimeout(
-		"/modules/ru-ru/i18n/modules/aa-autorec.json"
+		"/modules/ua-ua/i18n/modules/aa-autorec.json"
 	);
 
 	const currentSettings = AutomatedAnimations.AutorecManager.getAutorecEntries();
@@ -138,7 +138,7 @@ function localizeHouseDivided() {
 	/* Поддержка кириллицы в стилях */
 	const moduleCSS = document.createElement("link");
 	moduleCSS.rel = "stylesheet";
-	moduleCSS.href = `/modules/ru-ru/styles/house-divided.css`;
+	moduleCSS.href = `/modules/ua-ua/styles/house-divided.css`;
 	document.head.appendChild(moduleCSS);
 
 	/* Изменения в журнале */

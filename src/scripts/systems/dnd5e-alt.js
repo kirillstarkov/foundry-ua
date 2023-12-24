@@ -1,6 +1,6 @@
 export const Dnd5eAltInit = () => {
 	/* Выбор источника перевода */
-	game.settings.register("ru-ru", "altTranslation", {
+	game.settings.register("ua-ua", "altTranslation", {
 		name: "Использовать альтернативный перевод",
 		hint: "(Требуется модуль libWrapper) Использовать альтернативный перевод D&D5e от Phantom Studio. Иначе будет использоваться официальный перевод издательства Hobby World.",
 		type: Boolean,
@@ -13,10 +13,10 @@ export const Dnd5eAltInit = () => {
 		}
 	});
 
-	if (game.settings.get("ru-ru", "altTranslation")) {
+	if (game.settings.get("ua-ua", "altTranslation")) {
 		if (typeof libWrapper === "function") {
 			libWrapper.register(
-				"ru-ru",
+				"ua-ua",
 				"Localization.prototype._getTranslations",
 				loadAltTranslation,
 				"WRAPPER"
@@ -39,17 +39,17 @@ export const Dnd5eAltInit = () => {
 		const translations = await wrapped(lang);
 
 		const files = [
-			"modules/ru-ru/i18n/systems/dnd5e-alt.json",
-			"modules/ru-ru/i18n/modules/always-hp-alt.json",
-			"modules/ru-ru/i18n/modules/arbron-hp-bar-alt.json",
-			"modules/ru-ru/i18n/modules/combat-utility-belt-alt.json",
-			"modules/ru-ru/i18n/modules/dae-alt.json",
-			"modules/ru-ru/i18n/modules/damage-log-alt.json",
-			"modules/ru-ru/i18n/modules/health-monitor-alt.json",
-			"modules/ru-ru/i18n/modules/midi-qol-alt.json",
-			"modules/ru-ru/i18n/modules/tidy5e-sheet-alt.json",
-			"modules/ru-ru/i18n/modules/token-action-hud-dnd5e-alt.json",
-			"modules/ru-ru/i18n/modules/ready-set-roll-5e-alt.json"
+			"modules/ua-ua/i18n/systems/dnd5e-alt.json",
+			"modules/ua-ua/i18n/modules/always-hp-alt.json",
+			"modules/ua-ua/i18n/modules/arbron-hp-bar-alt.json",
+			"modules/ua-ua/i18n/modules/combat-utility-belt-alt.json",
+			"modules/ua-ua/i18n/modules/dae-alt.json",
+			"modules/ua-ua/i18n/modules/damage-log-alt.json",
+			"modules/ua-ua/i18n/modules/health-monitor-alt.json",
+			"modules/ua-ua/i18n/modules/midi-qol-alt.json",
+			"modules/ua-ua/i18n/modules/tidy5e-sheet-alt.json",
+			"modules/ua-ua/i18n/modules/token-action-hud-dnd5e-alt.json",
+			"modules/ua-ua/i18n/modules/ready-set-roll-5e-alt.json"
 		];
 
 		const promises = files.map((file) => this._loadTranslationFile(file));

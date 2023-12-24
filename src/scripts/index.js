@@ -10,7 +10,7 @@ Hooks.once("init", async () => {
 	/* Загрузка особых CSS стилей для систем */
 	const systemCSS = document.createElement("link");
 	systemCSS.rel = "stylesheet";
-	systemCSS.href = `/modules/ru-ru/styles/${system}.css`;
+	systemCSS.href = `/modules/ua-ua/styles/${system}.css`;
 	document.head.appendChild(systemCSS);
 
 	/* Пол прилагательных по умолчанию */
@@ -35,7 +35,7 @@ Hooks.once("init", async () => {
 	CONFIG.defaultFontFamily = "Noto Sans";
 
 	/* Настройка шрифта для подписей на сцене */
-	game.settings.register("ru-ru", "sceneLabelFont", {
+	game.settings.register("ua-ua", "sceneLabelFont", {
 		name: "Шрифт подписей на сцене",
 		hint: "Шрифт, используемый для имён токенов и названий заметок на сцене.",
 		type: Number,
@@ -50,7 +50,7 @@ Hooks.once("init", async () => {
 	});
 
 	CONFIG.canvasTextStyle.fontFamily = Object.keys(CONFIG.fontDefinitions)[
-		game.settings.get("ru-ru", "sceneLabelFont")
+		game.settings.get("ua-ua", "sceneLabelFont")
 	];
 
 	const systems = [
