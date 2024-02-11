@@ -12,8 +12,8 @@ export function init() {
 
 	/* Настройка Babele */
 	game.settings.register("ua-ua", "compendiumTranslation", {
-		name: "Перевод библиотек",
-		hint: "(Требуется модуль Babele) Некоторые библиотеки системы D&D5e будут переведены.",
+		name: "Переклад бібліотек",
+		hint: "(Потрібен модуль Babele) Деякі бібліотеки системи D&D5e будуть перекладені.",
 		type: Boolean,
 		default: true,
 		scope: "world",
@@ -26,20 +26,13 @@ export function init() {
 
 	if (!game.settings.get("ua-ua", "altTranslationSelected")) {
 		new Dialog({
-			title: "Выбор перевода",
-			content: `<p>Выберите предпочитаемый перевод системы D&D5. Вы можете изменить это позже в настройках модуля</p>`,
+			title: "Ласкаво просимо у нашу спільноту!",
+			content: `<p>Заходьте у наш <a href="discord.gg/ewy44agyeV">Discord</a> та <a href="t.me/posidenkisdicemi">Telegram</a></p>`,
 			buttons: {
 				hw: {
-					label: "Hobby World",
+					label: "Продовжити",
 					callback: () => {
 						game.settings.set("ua-ua", "altTranslation", false);
-						game.settings.set("ua-ua", "altTranslationSelected", true);
-					}
-				},
-				ph: {
-					label: "Phantom Studio",
-					callback: () => {
-						game.settings.set("ua-ua", "altTranslation", true);
 						game.settings.set("ua-ua", "altTranslationSelected", true);
 					}
 				}
@@ -51,7 +44,7 @@ export function init() {
 	if (typeof Babele !== "undefined") {
 		Babele.get().register({
 			module: "ua-ua",
-			lang: "ru",
+			lang: "ua",
 			dir: game.settings.get("ua-ua", "altTranslation")
 				? "compendium/dnd5e-alt"
 				: "compendium/dnd5e"
@@ -61,14 +54,14 @@ export function init() {
 	} else {
 		if (game.settings.get("ua-ua", "compendiumTranslation")) {
 			new Dialog({
-				title: "Перевод библиотек",
-				content: `<p>Для перевода библиотек системы D&D5 требуется активировать модуль <b>Babele</b>. Вы можете отключить перевод библиотек в настройках модуля</p>`,
+				title: "Переклад бібліотек",
+				content: `<p>Для перекладу бібліотек системи D&D5 потрібно активувати модуль <b>Babele</b>. Ви можете вимкнути переклад бібліотек у налаштуваннях модуля</p>`,
 				buttons: {
 					done: {
-						label: "Хорошо"
+						label: "Добре"
 					},
 					never: {
-						label: "Больше не показывать",
+						label: "Більше не показувати",
 						callback: () => {
 							game.settings.set("ua-ua", "compendiumTranslation", false);
 						}
@@ -93,12 +86,12 @@ export function init() {
 
 		const updateAAButton = $(`
   <label>
-    Перед переводом анимаций требуется включить модули Automated Animations, D&D5e Animations, JB2A Patreon
+    Перед перекладом анімацій потрібно увімкнути модулі Automated Animations, D&D5e Animations, JB2A Patreon
   </label>
   <div class="form-group">
       <button type="button">
           <i class="fas fa-cogs"></i>
-          <label>Перевести анимации</label>
+          <label>Перекласти анімації</label>
       </button>
   </div>
   `);
@@ -171,17 +164,17 @@ function localizeHouseDivided() {
 				}
 
 				const title = li.querySelector(".page-title").innerText;
-				if (!sections.events && title.startsWith("Событие:")) {
+				if (!sections.events && title.startsWith("Подія:")) {
 					const d = divider.cloneNode();
-					d.innerHTML = "<h2 class='section-header'>События</h2>";
+					d.innerHTML = "<h2 class='section-header'>Події</h2>";
 					li.before(d);
 					sections.events = true;
 					continue;
 				}
 
-				if (!sections.quests && title.startsWith("Задание:")) {
+				if (!sections.quests && title.startsWith("Завдання:")) {
 					const d = divider.cloneNode();
-					d.innerHTML = "<h2 class='section-header'>Задания</h2>";
+					d.innerHTML = "<h2 class='section-header'>Завдання</h2>";
 					li.before(d);
 					sections.quests = true;
 				}
@@ -196,7 +189,7 @@ function localizeHouseDivided() {
 		HouseDividedRussianJournalSheet,
 		{
 			types: ["base"],
-			label: "Разделённый дом",
+			label: "Розділений будинок",
 			makeDefault: false
 		}
 	);
