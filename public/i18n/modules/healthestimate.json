@@ -92,7 +92,7 @@
 				"hint": "Спосіб відображення прихованого імені істоти. {warning}",
 				"default": "Невідома істота",
 				"warningCUB": "Якщо ви використовуєте функцію прихованих імен CUB, то вона матиме пріоритет над цим налаштуванням.",
-				"warningPF2eWorkbench": "If you are using PF2e Workbench's feature to mystify names, it will take priority over this setting."
+				"warningPF2eWorkbench": "Якщо ви використовуєте функцію PF2e Workbench для містифікації імен, вона матиме пріоритет над цим параметром."
 			},
 			"alwaysShow": {
 				"name": "Завжди відображати оцінку",
@@ -119,8 +119,8 @@
 			},
 			"deathState": {
 				"name": "Смерть при стані",
-				"hint1": "Show token as defined on the {setting} setting when it has been affected by any condition that uses the icon set on the {setting2} setting.",
-				"hint2": "Show token as defined on the {setting} setting when it has been marked as defeated on combat."
+				"hint1": "Показувати токен, як визначено в {setting} налаштуванні, якщо на нього вплинула будь-яка умова, яка використовує набір значків в {setting2} налаштуванні.",
+				"hint2": "Показувати токен, як визначено в {setting} налаштуванні, якщо він був позначений як переможений у бою."
 			},
 			"deathStateName": {
 				"name": "Назва стану смерті",
@@ -144,7 +144,7 @@
 				"hint": "Тимчасові ПЗ будуть сумовані зі звичайними при оцінці загального здоров'я."
 			},
 			"breakOnZeroMaxHP": {
-				"name": "Hide Estimates on Tokens with 0 Max HP",
+				"name": "Приховати оцінки для токенів з 0 Макс. ПЗ",
 				"hint": "Корисно для об'єктів із токенами."
 			},
 			"menuSettings": {
@@ -181,15 +181,15 @@
 					"brighten": "Яскравіше"
 				},
 				"position": {
-					"name": "Height",
-					"hint": "The height is set relative to the token's frame. Negative values push it higher; positive, lower.",
+					"name": "Висота",
+					"hint": "Висота встановлюється відносно рамки токіна. Від’ємні значення підштовхують його вище; позитивний, нижчий.",
 					"top": "Зверху",
 					"middle": "Посередині",
 					"bottom": "Знизу"
 				},
 				"position2": {
-					"name": "Position",
-					"hint": "The position relative to the token's frame."
+					"name": "Позиція",
+					"hint": "Позиція відносно рамки токена."
 				},
 				"positionAdjustment": {
 					"name": "Налаштування відступу",
@@ -197,7 +197,7 @@
 				},
 				"scaleToZoom": {
 					"name": "Масштабувати оцінку при наближенні",
-					"hint": "Scales the estimate based on the zoom distance. This will cause a drop in performance when used along {setting3}."
+					"hint": "Масштабує оцінку на основі відстані масштабування. Це призведе до зниження продуктивності при використанні разом {setting3}."
 				}
 			}
 		},
@@ -212,20 +212,20 @@
 		},
 		"cyberpunk-red-core": {
 			"unorganics": {
-				"4": "Intact",
-				"3": "Operational",
-				"2": "Malfunctioning",
-				"0": "Disabled"
+				"4": "Неушкоджений",
+				"3": "Оперативний",
+				"2": "Несправність",
+				"0": "Вимкнено"
 			}
 		},
 		"cyphersystem": {
 			"impaired": {
-				"name": "Health level for Impaired PCs",
-				"hint": "Sets the maximum health level (current / maximum, fraction 0.0 - 1.0) that can be reported for a PC that is Impaired on the Death Track"
+				"name": "Рівень здоров'я для несправних ПК",
+				"hint": "Встановлює максимальний рівень здоров’я (поточний/максимальний, частка 0.0 - 1.0) про які можна повідомити для ПК, який має пошкодження на Death Track"
 			},
 			"debilitated": {
-				"name": "Health level for Debilitated PCs",
-				"hint": "Sets the maximum health level (current / maximum, fraction 0.0 - 1.0) that can be reported for a PC that is Debilitated on the Death Track"
+				"name": "Рівень здоров'я для ослаблених ПК",
+				"hint": "Встановлює максимальний рівень здоров’я (поточний/максимальний, частка 0.0 - 1.0) про які можна повідомити для ПК, який ослаблений на Death Track"
 			}
 		},
 		"PF1": {
@@ -260,8 +260,8 @@
 				"hint": "Приховує оцінку транспорту."
 			},
 			"workbenchMystifier": {
-				"name": "(EXPERIMENTAL) PF2e Workbench's Mystifier Support",
-				"hint": "If the NPC Mystification settings are enabled, Chat Outputs will ignore the {setting} setting's name and use the token's name if it is different from its actor's Prototype Token's name."
+				"name": "(EXPERIMENTAL) Підтримка Mystifier у PF2e Workbench",
+				"hint": "Якщо налаштування NPC Mystification увімкнено, вихідні дані чату ігноруватимуть назву параметра{setting} і використовуватимуть назву маркера, якщо вона відрізняється від імені прототипу Prototype Token's."
 			}
 		},
 		"numenera": {
@@ -273,7 +273,7 @@
 		"starfinder": {
 			"useThreshold": {
 				"name": "Використовувати поріг транспорту",
-				"hint": "Defines which estimation table will be used when calculating a Vehicle's estimatives."
+				"hint": "Визначає, яку таблицю оцінок використовуватимуть під час розрахунку оцінок транспортного засобу."
 			},
 			"addStamina": {
 				"name": "Враховувати Живучість",
@@ -288,12 +288,12 @@
 		},
 		"swade": {
 			"defaultWildCardMaxWounds": {
-				"name": "Default Wild Card's Max Wounds",
-				"hint": "This is used to calculate the max wounds a Wild Card NPC should have by default for estimations."
+				"name": "Максимальна кількість ран Wild Card за умовчанням",
+				"hint": "Це використовується для розрахунку максимальної кількості ран, які NPC Wild Card повинен мати за умовчанням для оцінки."
 			},
 			"showIncap": {
 				"name": "Ефект статусу {incap}",
-				"hint": "Tokens with the {incap} Status Effect will be shown as {incap} instead of their current estimates. Doesn't work for tokens that are vehicles or dead."
+				"hint": "Токени з {incap} Status Effect відображатимуться як {incap} замість їхніх поточних оцінок. Не працює для токенів, які є транспортними засобами або мертвими."
 			}
 		}
 	}
